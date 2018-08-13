@@ -67,11 +67,13 @@ header {
 }
 header .profile-image {
   margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
-  border: 3px solid white;
+  padding: 2px;
+  border: 2px solid white;
   transition: all .5s;
+  transition-timing-function: cubic-bezier(0.3,-0.4, 0.25, 2.25);
 }
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
@@ -89,7 +91,7 @@ header .profile-image:hover {
   color: #efefef;
 }
 .card {
-  margin: 30px;
+  margin: 30px 30px 0px 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
@@ -102,6 +104,10 @@ header .profile-image:hover {
   border-color: #2C6FA1;
 }
 
+.full-width {
+  max-width: 1110px;
+}
+
 ul.skills {
   padding: 0;
   text-align: center;
@@ -111,13 +117,32 @@ ul.skills {
   border-radius: 6px;
   display: inline-block;
   background: #2C6FA1;
+  background: url('images/forest.jpg') no-repeat center center;
+  background-size: cover;
   color: white;
+  text-shadow: 1px -1px 8px black;
   padding: 5px 10px;
   margin: 2px;
 }
 
-.skills li:nth-child(odd) {
+/* .skills li:nth-child(odd) {
   background: #377250;
+} */
+
+table.hobbies tr {
+  width: 50%;
+}
+
+table.hobbies td {
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
+table.hobbies td:hover {
+  background-color: #2C6FA1;
+  color: white;
 }
 
 footer {
